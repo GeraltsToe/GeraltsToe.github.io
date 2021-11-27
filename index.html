@@ -16,14 +16,58 @@
             font: italic;
         }
 
+        .color2 {
+            color: blue;
+            font: italic;
+        }
+
     </style>
 </head>
 <body class="bg-dark">
 
+    //die Überschrift
     <div class="font">
         Hello World! <br>
         On this Page im sharing my programming developement.
     </div>
+
+    <div class="font">
+        So my last Project was a little encrypting Generator using base64. It surely isnt that big but its something, right?
+    </div>
+
+    //ab hier beginnt der Code 
+
+    <div>
+        <textarea name="" id="pw1" cols="50" rows="10" class="color2"></textarea>
+    </div>
+
+    <div>
+        <input type="submit" value="Decodieren" id="inline left" onclick="base64_decode()">
+        <input type="submit" value="Codieren" id="inline left" onclick="base64_encode()">
+    </div>
+    <h1 id="pw2"></h1>
+
+    <script>
+
+
+        const str = document.getElementById("pw1").innerHTML;
+        const base64 = btoa(str);
+        const decoded = atob(base64);
+
+
+
+        function base64_decode() {
+            var getText = document.getElementById('pw1').value;
+            var base64_decode = atob(getText);
+            document.getElementById('pw1').value = base64_decode;
+        }
+
+        function base64_encode() {
+            var getText = document.getElementById('pw1').value;
+            var base64_encode = btoa(getText);
+            document.getElementById('pw1').value = base64_encode;
+        }
+    </script>
     
 </body>
 </html>
