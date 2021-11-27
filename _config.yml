@@ -1,1 +1,6 @@
 theme: jekyll-theme-midnight
+
+title: GeraltsToe
+description: test
+
+show_downloads: false
